@@ -1,0 +1,20 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+A = int(input("введите сумму депозита:"))
+B = int(100)
+C, D, E, F = per_cent['ТКБ'], per_cent['СКБ'], per_cent['ВТБ'], per_cent['СБЕР']
+J = A//B*C, A//B*D, A//B*E, A//B*F
+print("Сумма ваших накоплений за год составит:", int(A//B*C), int(A//B*D), int(A//B*E), int(A//B*F))
+print("В соответствующих банках:", list(per_cent.keys()))
+print("Максимальная сумма, которую вы сможете заработать - это:", int(max(J)))
+print("Минимальная сумма, которую вы сможете заработать - это:", int(min(J)))
+r = 0
+for k in per_cent:
+    if per_cent [k] > r:
+        r = per_cent [k]
+        m = k
+print("Наиболее подходящий вам банк - это:", m)
+for k in per_cent:
+    if per_cent [k] < r:
+        r = per_cent [k]
+        z = k
+print("Наименее подходящий вам банк - это:", z)
