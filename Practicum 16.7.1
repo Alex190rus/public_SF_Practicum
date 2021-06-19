@@ -1,0 +1,17 @@
+"SF_PM.ру"
+class Cat:
+    def __init__(self, name, gender, age):
+        self.name = name
+        self.gender = gender
+        self.age = age
+
+    def info(self):
+        print('Кот', self.name, 'пол', self.gender, 'возраст', self.age)
+
+"SF_PM_IT.ру"
+from SF_PM import Cat
+Baron = Cat('Baron', 'male', '2years')
+Sem = Cat('Sem', 'male', '2years')
+
+print(Baron.info())
+print(Sem.info())
