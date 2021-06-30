@@ -1,0 +1,34 @@
+a = int(input('Введите любое целое число:'))
+b = (2, 6, 1, 10, 45, 23, 67, 54, 3, 5, a)
+b = list(b)
+
+if a > 99 or a <= 0:
+    raise ValueError(f"Вы ввели {a}. Пожалуйста введите целое число в диапазоне от 1 - 99.")
+
+#b = sorted(b)            способ 1
+for i in range(len(b)):  #способ 2
+   for j in range(len(b) - i - 1):
+        if b[j] > b[j + 1]:
+            b[j], b[j + 1] = b[j + 1], b[j]
+
+print(b)
+
+def binary_search(array, key):
+    low_bount = 0
+    upp_bount = len(array) - 1
+
+    while low_bount <= upp_bount:
+        center = (low_bount + upp_bount) // 2
+
+        if array[center] == key:
+            return center
+
+        elif array[center] > key:
+            upp_bount = center - 1
+
+        elif array[center] < key:
+            low_bount = center + 1
+
+    return None
+
+print(binary_search(b, a))
