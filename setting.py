@@ -1,2 +1,2 @@
-email = '123456789@gmail.com'
-password = '123456789'
+email = 'ваш мейл'
+password = 'ваш пасс'
